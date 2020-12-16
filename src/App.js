@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ColorChangeButton from './colorChangeButton'
 import './App.css';
 
 function App() {
@@ -8,9 +9,9 @@ function App() {
         <div className={"react-root " + color}>
             <div className="centered">
                 <h1>Colour picker</h1>
-                <button className="red" onClick={() => setColor("red")}>red</button>
-                <button className="blue" onClick={() => setColor("blue")}>blue</button>
-                <button className="yellow" onClick={() => setColor("yellow")}>yellow</button>
+                <ColorChangeButton color="red" setColor={setColor}/>
+                <ColorChangeButton color="blue" setColor={setColor}/>
+                <ColorChangeButton color="yellow" setColor={setColor}/>
             </div>
         </div>
     );
